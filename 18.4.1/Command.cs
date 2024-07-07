@@ -33,6 +33,7 @@ namespace _18._4._1
             Console.WriteLine(videoInfo.Title);
             Console.WriteLine($"Продолжительность: {videoInfo.Duration}");
             Console.WriteLine($"Автор: {videoInfo.Author}");
+            Console.WriteLine($"Описание: {videoInfo.Description}");
         }
     }
 
