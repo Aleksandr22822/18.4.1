@@ -19,7 +19,7 @@ namespace _18._4._1
             _command.Run();
         }    
 
-        void Download () 
+        void Consel () 
         { 
         
         }    

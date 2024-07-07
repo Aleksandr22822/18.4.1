@@ -49,13 +49,12 @@ namespace _18._4._1
 
         public async void Run()
         {
-            var youtube = new YoutubeClient();
-
-            var streamManifest = await youtube.Videos.Streams.GetManifestAsync(youTubeServiceReceiver.adress);
+            var streamManifest = await youtubeClient.Videos.Streams.GetManifestAsync(youTubeServiceReceiver.adress);
             var streamInfo = streamManifest.GetMuxedStreams().GetWithHighestVideoQuality();
-            await youtube.Videos.Streams.DownloadAsync(streamInfo, $"video.{streamInfo.Container}");
+            await youtubeClient.Videos.Streams.DownloadAsync(streamInfo, $"video.{streamInfo.Container}");
         }
     }
+    
         
     
 }
